@@ -2,8 +2,6 @@ function createCounter() {
   let counter = Number(arguments[0]) || 0;
   let minValue = arguments[1] || null;
   let maxValue = arguments[2] || null;
-  minValue = Number.parseInt(arguments[1]);
-  maxValue = Number.parseInt(arguments[2]);
 
   if (
     checkForEulerNumber(counter) ||
@@ -23,6 +21,9 @@ function createCounter() {
     alert("Initial value can't be bigger than max value");
     return;
   }
+
+  minValue = Number.parseInt(arguments[1]);
+  maxValue = Number.parseInt(arguments[2]);
 
   const parentEl = document.getElementById("parentEl");
   const counterNode = document.createElement("div");
@@ -133,3 +134,5 @@ const initialSettings = () => {
 };
 
 initialSettings();
+
+let counter = createCounter(1, 0, 1);
