@@ -134,5 +134,3 @@ const initialSettings = () => {
 };
 
 initialSettings();
-
-let counter = createCounter(1, 0, 1);
